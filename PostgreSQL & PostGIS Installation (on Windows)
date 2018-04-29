@@ -10,4 +10,32 @@ objects to the PostgreSQL database management system.
 
 Following are the steps to install PostgreSQL and PostGIS on a Windows (7, 8 and 10) based machine.
 
-1) 
+1) PostgreSQL (https://www.postgresql.org/download/windows/) provides interactive installers for Windows based machine. Download one of
+such installers from Enterprise DB webpage: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+
+2) Click Windows (as operating system) and select the appropriate postgresql version you want to download. Note: I still prefer to work
+with PostgreSQL 9.5.x version.
+
+3) Run (preferably, Run As Adminitrator) the .exe file downloaded from Enterprise DB.
+
+4) Keep the suggested and default settings including directories. Once prompted, choose the password (you will use this password everytime
+you login to the Postgres application).
+
+5) Click Next. Make sure the "Launch Stack Builder at exit?" box is checked and click finish. Note: once checked, Stack builder
+will initiate PostGIS installation automatically and will install all dependencies.
+
+6) From the drop down menu, select "PostgreSQL 9.5 server on port 5432". Cick Next.
+
+7) Under "spatial extensions", select the most recent version of PostGIS bundle (PostGIS 2.3 for example).
+
+8) Click Next. Let the installation begin. Make sure create spatial database is checked. Leave the default options.
+Make sure you enter your password if needed.
+
+9) Now you should have a fully operational postgresql/postgis database (which completes sucessfull installation).
+
+10) Under Windows programs, find pgAdminIII. Run this program. It is GUI of PotgreSQL database managament system.
+Double-click on the Server. Enter the password. Expore the structure of default Postgres databses.
+
+Enjoy Postgres!
+
+Source: https://www.gpsfiledepot.com/tutorials/installing-and-setting-up-postgresql-with-postgis/
