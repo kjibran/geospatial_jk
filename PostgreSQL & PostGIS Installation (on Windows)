@@ -1,0 +1,13 @@
+# What is PostgreSQL and PostGIS?
+
+PostgreSQL is an open-source Object Relational Database Management System (ORDMS). It is also known as Postgres. As a database server,
+its main function is to store data securely and return that data in response to requests (e.g. queries) from other software applications.
+
+PostGIS is an open-source software that gives "spatial" capabilities to the PostgreSQL. That is, it adds support for the geographic
+objects to the PostgreSQL database management system.
+
+# How to install them on Windows based machine?
+
+Following are the steps to install PostgreSQL and PostGIS on a Windows (7, 8 and 10) based machine.
+
+1) 
