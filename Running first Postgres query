@@ -1,0 +1,44 @@
+# After installation of PostgreSQL/PostGIS
+
+Once the installation of PostgreSQL/PostGIS is completed. It is a good idea to "play around" with some SQL. Let's do it!
+
+Right-click on the database and click on "SQL" button in the top panel bar. This will open SQL Editor window.
+Important note: First, we will have to activate postgis extension in our database. This is important, every time we want to run postgis
+queries in a new database.
+
+To activate postgis, do the following.
+In SQL editor, type the follwing and click on "play (execute)" button.
+
+Create Extension PostGIS;
+
+Simply stated, you are now ready to run GIS-based SQL queries in your database.
+
+Let's create a sample table:
+
+``````````````````````````````````````
+CREATE TABLE article (
+    article_id bigserial primary key,
+    article_name varchar(20) NOT NULL,
+    article_desc text NOT NULL,
+    date_added timestamp default NULL
+);
+``````````````````````````````````````
+
+Above code will create a sample table in your postgres database. In the moment, we haven't involved any GIS.
+Let's run the first query. Type following in the SQL editor. Select it and click play button again.
+
+``````````````````````
+Select * from article;
+``````````````````````
+
+It means you are querying your database to return all rows and columns of the sample table (you should see
+the similar output at the console window).
+
+Let's play with some GIS data. You can any shapefile to the postgres database. Do it by going to Plugins>PostGIS Shapefile Loader
+(you can find it in the drop down menu on the top left panel of pgAdminIII).
+
+Click on "Add file". Browse to the shapefile in your machine. Import it.
+
+Now come back to the SQL editor and execute the same command as above. Examine the output in the console output window.
+
+Congreatulations for your very first postgres queries!
